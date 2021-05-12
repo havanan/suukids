@@ -1,4 +1,3 @@
-/vendor/
 node_modules/
 npm-debug.log
 yarn-error.log
@@ -21,3 +20,11 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+/node_modules
+/public/storage
+/storage/*.key
+/vendor
+.idea
+/public/upload/avatar/*
+composer.lock

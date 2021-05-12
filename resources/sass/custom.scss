@@ -1,0 +1,87 @@
+td {
+    font-size:20px
+}
+.content-stock {
+    #addProduct {
+        //.product-stock-group {
+        //    width: 100px;
+        //}
+        //.product-name {
+        //    width: 230px;
+        //}
+        //.product-price {
+        //    width: 125px;
+        //}
+        //.product-total {
+        //    width: 100px;
+        //}
+        //.product-quantity {
+        //    width: 75px;
+        //}
+    }
+}
+.container-order {
+    .order-option {
+        margin-top: 20px;
+    }
+}
+.page-first a,
+.page-pre a,
+.page-next a,
+.page-number a,
+.page-last a {
+    position: relative;
+    display: block;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    padding: 0.3rem 0rem;
+}
+.page-first a:hover,
+.page-pre a:hover,
+.page-next a:hover,
+.page-number a:hover,
+.page-last a:hover {
+    z-index: 2;
+    color: #0056b3;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    cursor: pointer;
+}
+.active > a {
+    z-index: 1;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+#table-list-order {
+    .bootstrap-table .table:not(.table-condensed),
+    .bootstrap-table .table:not(.table-condensed) > tbody > tr > td,
+    .bootstrap-table .table:not(.table-condensed) > tbody > tr > th,
+    .bootstrap-table .table:not(.table-condensed) > tfoot > tr > td,
+    .bootstrap-table .table:not(.table-condensed) > tfoot > tr > th,
+    .bootstrap-table .table:not(.table-condensed) > thead > tr > td {
+        width: max-content !important;
+    }
+}
+.hidden {
+    display: none;
+}
+.lbl-time {
+    line-height: 34px;
+    margin-right: 5px;
+}
+.content-header {
+    .container-fluid {
+        .m-0.text-dark {
+            font-size: 20px;
+        }
+    }
+}
+.wrapper {
+    font-size: 14px;
+}

@@ -1,0 +1,63 @@
+.date-filter-box {
+    width: 14.1%;
+    padding: 5px;
+}
+
+.title {
+    font-size: 13px;
+}
+.tooltip-inner {
+    max-width: 230px;
+    width: 230px;
+}
+#table-list tbody tr {
+    cursor: pointer;
+}
+.drn-menu{
+    top: 170px;
+    height: 400px;
+    overflow: scroll;
+}
+.select2-container .select2-selection--single{
+    height: 37px;
+}
+.order-active {
+    color: #000 !important;
+    background-color: #d8ec9c !important;
+}
+#order_sortable {
+    list-style: none;
+    padding: 0;
+    height: 500px;
+    overflow: auto;
+}
+#order_sortable li {
+    padding: 6px 12px;
+    cursor: move;
+}
+.form-control{
+    height: calc(1.9rem + 2px);
+    padding: 0.275rem 0.75rem;
+}
+.card-header{
+    label{
+        margin-bottom: 0;
+    }
+
+}
+.order-area{
+    font-size: 0.9rem;
+    #list-option-search{
+        .input-group.date{
+            .form-control{
+                height: calc(1.3rem + 2px);
+                font-size: 14px;
+            }
+        }
+
+    }
+}
+
+.content-header{
+    padding: 0 15px;
+}
