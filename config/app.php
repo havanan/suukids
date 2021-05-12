@@ -169,7 +169,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Mavinoo\LaravelBatch\LaravelBatchServiceProvider::class,
+        Mavinoo\Batch\BatchServiceProvider::class,
         Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
 
         /*
@@ -238,7 +238,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-        'Batch' => Mavinoo\LaravelBatch\LaravelBatchFacade::class,
+        'Batch' =>Mavinoo\Batch\BatchFacade::class,
         'FCM'      => LaravelFCM\Facades\FCM::class,
     ],
 

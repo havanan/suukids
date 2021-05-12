@@ -11,7 +11,7 @@
  Target Server Version : 100418
  File Encoding         : 65001
 
- Date: 28/04/2021 00:58:26
+ Date: 13/05/2021 01:26:19
 */
 
 SET NAMES utf8mb4;
@@ -33,12 +33,13 @@ CREATE TABLE `action_logs`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of action_logs
 -- ----------------------------
 INSERT INTO `action_logs` VALUES (1, 3, 2, 'admin/sell/order/create?close_when_done=1', '127.0.0.1', '{\"customer_phone_or_code\":\"84394128866\",\"customer_name\":\"\"}', 'Vũ Thị Thanh Huyền', 'Suu kids', '2021-02-17 21:51:36', '2021-02-17 21:51:36');
+INSERT INTO `action_logs` VALUES (2, 2, 2, 'admin/sell/order/create?close_when_done=1', '127.0.0.1', '{\"customer_phone_or_code\":\"0392862345\",\"customer_name\":\"\"}', 'Suu Kids', 'Suu kids', '2021-05-13 01:10:12', '2021-05-13 01:10:12');
 
 -- ----------------------------
 -- Table structure for admin
@@ -192,11 +193,12 @@ CREATE TABLE `customers`  (
   `is_created_by_admin` tinyint NOT NULL DEFAULT 0,
   `shop_id` int UNSIGNED NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of customers
 -- ----------------------------
+INSERT INTO `customers` VALUES (1, 'vifun19', NULL, NULL, NULL, 'vifun19@gmail.com', '0392862345', NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-13 01:10:41', '2021-05-13 01:10:41', 0, 2);
 
 -- ----------------------------
 -- Table structure for delivery_methods
@@ -1120,11 +1122,12 @@ CREATE TABLE `export_excel_logs`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of export_excel_logs
 -- ----------------------------
+INSERT INTO `export_excel_logs` VALUES (1, 'Xuất excel từ danh sách đơn hàng', 'Đã xuất excel từ danh sách đơn hàng vào lúc 2021-05-13 01:22:23', 'http://127.0.0.1:8000/admin/sell/order/export-excel', 2, 'Suu Kids', '127.0.0.1', 2, 'Suu kids', '2021-05-13 01:22:23', '2021-05-13 01:22:23');
 
 -- ----------------------------
 -- Table structure for fcm_tokens
@@ -1180,7 +1183,7 @@ CREATE TABLE `login_logs`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of login_logs
@@ -1198,6 +1201,10 @@ INSERT INTO `login_logs` VALUES (10, 2, 2, 'http://127.0.0.1:8000/login', '[]', 
 INSERT INTO `login_logs` VALUES (11, 2, 2, 'http://127.0.0.1:8000/login', '[]', '127.0.0.1', 'Suu Kids', 'Suu kids', '2021-04-20 00:28:35', '2021-04-20 00:28:35');
 INSERT INTO `login_logs` VALUES (12, 2, 2, 'http://127.0.0.1:8000/login', '[]', '127.0.0.1', 'Suu Kids', 'Suu kids', '2021-04-25 23:58:28', '2021-04-25 23:58:28');
 INSERT INTO `login_logs` VALUES (13, 2, 2, 'http://127.0.0.1:8000/login', '[]', '127.0.0.1', 'Suu Kids', 'Suu kids', '2021-04-27 23:36:11', '2021-04-27 23:36:11');
+INSERT INTO `login_logs` VALUES (14, 2, 2, 'http://127.0.0.1:8000/login', '[]', '127.0.0.1', 'Suu Kids', 'Suu kids', '2021-04-28 23:52:43', '2021-04-28 23:52:43');
+INSERT INTO `login_logs` VALUES (15, 2, 2, 'http://127.0.0.1:8000/login', '[]', '127.0.0.1', 'Suu Kids', 'Suu kids', '2021-05-08 01:13:19', '2021-05-08 01:13:19');
+INSERT INTO `login_logs` VALUES (16, 2, 2, 'http://127.0.0.1:8000/login', '[]', '127.0.0.1', 'Suu Kids', 'Suu kids', '2021-05-09 23:53:07', '2021-05-09 23:53:07');
+INSERT INTO `login_logs` VALUES (17, 2, 2, 'http://127.0.0.1:8000/login', '[]', '127.0.0.1', 'Suu Kids', 'Suu kids', '2021-05-13 00:45:40', '2021-05-13 00:45:40');
 
 -- ----------------------------
 -- Table structure for marketing_cost
@@ -1433,11 +1440,15 @@ CREATE TABLE `order_histories`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of order_histories
 -- ----------------------------
+INSERT INTO `order_histories` VALUES (1, 1, 1, 'Mở đơn hàng', 2, '2021-05-13 01:10:41', '2021-05-13 01:10:41');
+INSERT INTO `order_histories` VALUES (2, 1, 3, 'Thay đổi Trạng thái từ Chưa xác nhận thành Xác Nhận - Chốt đơn', 2, '2021-05-13 01:11:09', '2021-05-13 01:11:09');
+INSERT INTO `order_histories` VALUES (3, 1, 3, 'Thay đổi Trạng thái từ Xác Nhận - Chốt đơn thành Chuyển hàng', 2, '2021-05-13 01:17:38', '2021-05-13 01:17:38');
+INSERT INTO `order_histories` VALUES (4, 1, 3, 'Thay đổi Trạng thái từ Chuyển hàng thành Thành công', 2, '2021-05-13 01:18:21', '2021-05-13 01:18:21');
 
 -- ----------------------------
 -- Table structure for order_products
@@ -1455,11 +1466,13 @@ CREATE TABLE `order_products`  (
   `stock_product_id` int UNSIGNED NULL DEFAULT NULL,
   `called` tinyint NULL DEFAULT 0 COMMENT 'Đã gọi điện hỏi thăm?',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of order_products
 -- ----------------------------
+INSERT INTO `order_products` VALUES (1, 1, 2, '2021-05-13 01:10:41', '2021-05-13 01:10:41', 150000, 1, 0.00, 1, 0);
+INSERT INTO `order_products` VALUES (2, 1, 7, '2021-05-13 01:10:41', '2021-05-13 01:10:41', 150000, 1, 0.00, 1, 0);
 
 -- ----------------------------
 -- Table structure for order_sources
@@ -1512,16 +1525,16 @@ CREATE TABLE `order_status`  (
 -- ----------------------------
 -- Records of order_status
 -- ----------------------------
-INSERT INTO `order_status` VALUES (1, 'Gọi máy bận', 0, 1, 1, 0, NULL, 1, 0, '#dabc51', '2021-02-17 03:12:50', NULL, NULL, NULL);
+INSERT INTO `order_status` VALUES (1, 'Gọi máy bận', 0, 1, 1, 0, NULL, 1, 0, '#dabc51', '2021-02-17 03:12:50', NULL, NULL, '2021-05-13 01:07:01');
 INSERT INTO `order_status` VALUES (2, 'Chưa xác nhận', 0, 0, 1, 0, NULL, 0, 0, '#76ec39', '2021-02-17 03:12:50', NULL, NULL, NULL);
 INSERT INTO `order_status` VALUES (3, 'Hủy', 1, 0, 1, 0, NULL, 1, 0, '#7a7980', '2021-02-17 03:12:50', NULL, NULL, NULL);
 INSERT INTO `order_status` VALUES (4, 'Chuyển hàng', 0, 0, 1, 0, NULL, 3, 0, '#FF0000', '2021-02-17 03:12:50', NULL, NULL, NULL);
 INSERT INTO `order_status` VALUES (5, 'Xác Nhận - Chốt đơn', 0, 0, 1, 0, NULL, 2, 0, '#cc6633', '2021-02-17 03:12:50', NULL, NULL, NULL);
 INSERT INTO `order_status` VALUES (6, 'Chuyển hoàn', 0, 0, 1, 0, NULL, 4, 0, '#000000', '2021-02-17 03:12:50', NULL, NULL, NULL);
 INSERT INTO `order_status` VALUES (7, 'Thành công', 0, 0, 1, 0, NULL, 5, 0, '#996699', '2021-02-17 03:12:50', NULL, NULL, NULL);
-INSERT INTO `order_status` VALUES (8, 'Không nghe điện', 0, 1, 1, 0, NULL, 1, 0, '#337ab7', '2021-02-17 03:12:50', NULL, NULL, NULL);
+INSERT INTO `order_status` VALUES (8, 'Không nghe điện', 0, 1, 1, 0, NULL, 1, 0, '#337ab7', '2021-02-17 03:12:50', NULL, NULL, '2021-05-13 01:07:27');
 INSERT INTO `order_status` VALUES (9, 'Kế toán mặc định', 0, 0, 1, 0, NULL, 2, 0, '#ff0099', '2021-02-17 03:12:50', NULL, NULL, NULL);
-INSERT INTO `order_status` VALUES (10, 'Đã thu tiền', 0, 0, 0, 1, NULL, 5, 1, '#00a65a', '2021-02-17 03:12:50', NULL, NULL, NULL);
+INSERT INTO `order_status` VALUES (10, 'Đã thu tiền', 0, 0, 0, 1, NULL, 5, 1, '#00a65a', '2021-02-17 03:12:50', NULL, NULL, '2021-05-13 01:08:12');
 INSERT INTO `order_status` VALUES (11, 'Đã trả hàng về kho', 0, 0, 0, 1, NULL, 5, 2, '#331211', '2021-02-17 03:12:50', NULL, NULL, NULL);
 
 -- ----------------------------
@@ -1611,11 +1624,12 @@ CREATE TABLE `orders`  (
   `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `order_code_unique`(`code`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of orders
 -- ----------------------------
+INSERT INTO `orders` VALUES (1, NULL, 1, NULL, NULL, NULL, 0, 0, 0, 0, 7, 4, NULL, 3, 1, 2, NULL, 3, NULL, 300000.00, 0.00, 0.00, 0.00, 300000.00, '2021-05-13 01:10:41', '2021-05-13 01:10:41', '2021-05-13 01:11:09', NULL, '2021-05-13 01:17:38', '2021-05-13 01:18:21', NULL, NULL, '2021-05-13 01:10:41', '2021-05-13 01:18:21', '10000', 2, 'App\\Models\\User', 2, 'App\\Models\\User', 'App\\Models\\User', NULL, NULL, NULL, NULL, NULL, 0, 1, NULL, NULL, 2, NULL, NULL, NULL, '0392862345');
 
 -- ----------------------------
 -- Table structure for password_resets
@@ -2028,17 +2042,20 @@ CREATE TABLE `stock_products`  (
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   `stock_id` bigint NOT NULL COMMENT 'Số hiệu Stock In',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of stock_products
 -- ----------------------------
-INSERT INTO `stock_products` VALUES (2, 2, 14, NULL, 1, 'Cái', 50000.00, 700000.00, 1, NULL, 0, '2021-04-27 23:40:49', '2021-04-27 23:40:49', 5);
+INSERT INTO `stock_products` VALUES (2, 2, 13, NULL, 1, 'Cái', 50000.00, 700000.00, 1, NULL, 0, '2021-04-27 23:40:49', '2021-05-13 01:17:38', 5);
 INSERT INTO `stock_products` VALUES (3, 3, 14, NULL, 1, 'Cái', 50000.00, 700000.00, 1, NULL, 0, '2021-04-27 23:42:52', '2021-04-27 23:42:52', 6);
 INSERT INTO `stock_products` VALUES (4, 4, 14, NULL, 1, 'Cái', 50000.00, 700000.00, 1, NULL, 0, '2021-04-27 23:49:14', '2021-04-27 23:49:14', 7);
 INSERT INTO `stock_products` VALUES (5, 5, 6, NULL, 1, 'Cái', 50000.00, 300000.00, 1, NULL, 0, '2021-04-27 23:52:09', '2021-04-27 23:52:09', 8);
 INSERT INTO `stock_products` VALUES (6, 6, 6, NULL, 1, 'Cái', 50000.00, 300000.00, 1, NULL, 0, '2021-04-27 23:53:08', '2021-04-27 23:53:08', 9);
 INSERT INTO `stock_products` VALUES (7, 8, 9, NULL, 1, 'Cái', 50000.00, 450000.00, 1, NULL, 0, '2021-04-28 00:03:39', '2021-04-28 00:03:39', 10);
+INSERT INTO `stock_products` VALUES (8, 7, 5, NULL, 1, 'Cái', 50000.00, 300000.00, 1, NULL, 0, '2021-04-27 23:53:08', '2021-05-13 01:17:38', 9);
+INSERT INTO `stock_products` VALUES (9, 9, 9, NULL, 1, 'Cái', 50000.00, 450000.00, 1, NULL, 0, '2021-04-28 00:03:39', '2021-04-28 00:03:39', 10);
+INSERT INTO `stock_products` VALUES (10, 10, 9, NULL, 1, 'Cái', 50000.00, 450000.00, 1, NULL, 0, '2021-04-28 00:03:39', '2021-04-28 00:03:39', 10);
 
 -- ----------------------------
 -- Table structure for suppliers

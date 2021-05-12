@@ -251,7 +251,7 @@ function getFormatter($item)
                             +   '<td>' + (province ? province._name : '')  +  '</td>'
                             +   '<td>' + errorMessage + '</td>'
                             +   '<td>'
-                            +   '<a href="'+ order.edit_url + '?close_when_done=1' +'" target="_blank" class="btn btn-success btn-xs btn-suggest-customer"> Sửa</button>'
+                            +   '<a href="'+ order.edit_url + '?close_when_done=1' +'" target="_blank" class="btn btn-success  btn-suggest-customer"> Sửa</button>'
                             +   '</td>'
                             + '</tr>';
                 }
@@ -662,7 +662,7 @@ function getFormatter($item)
                         </div>
                         <div class="row" style="pading: 5px; border-top: 1px dotted #999;border-bottom: 1px dotted #999;background-color: #EFEFEF !important;overflow: auto;">
                             @foreach($filterStatuses as $index => $status)
-                            <div class="col-2 p-1" style="font-size: 13px;border-left: 5px solid {{ $status->color }}; color:{{ $status->color }};">
+                            <div class="col-2 p-1" style="font-size: 18px;border-left: 5px solid {{ $status->color }}; color:{{ $status->color }};">
                                 <label class="mb-0 align-left" for="status_{{$status->id}}">
                                     <input name="status[]" type="checkbox" id="status_{{$status->id}}"
                                         @if((empty(request()->input('status_arr')) && $index==0) || (is_array(request()->input('status_arr'))&&in_array($status->id, request()->input('status_arr'))) ) checked @endif
@@ -671,7 +671,7 @@ function getFormatter($item)
                             </div>
                             @endforeach
                         </div>
-                        <div class="order-option mt-1">
+                        <div class="order-option mt-3">
                             <div class="row">
                                 <div class="col-md-8">
                                     <select name="source_id" id="source_id" class="w-auto d-inline ml-2 form-control"
@@ -698,7 +698,7 @@ function getFormatter($item)
                                     <select name="product_code" id="product_code" class="w-auto d-inline ml-2 form-control" onchange="reloadList()">
                                         <option value="">Chọn sản phẩm</option>
                                         @foreach($productList as $productCode => $productName)
-                                            <option value="{{ $productCode }}">{{ $productName }}</option>
+                                            <option value="{{ $productCode }}">{{ $productName }} - {{ $productCode }}</option>
                                         @endforeach
                                     </select>
                                     <select name="bundle_id" id="bundle_id" class="w-auto d-inline ml-2 form-control"
@@ -749,19 +749,19 @@ function getFormatter($item)
                             </div>
 
                         </div>
-                        <div class="row form-group">
+                        <div class="row form-group mt-3">
                             <div class="col">
-                                <a target="_blank" href="{{route('admin.sell.order.create')}}?close_when_done=1" class="btn btn-xs btn-info"><i
+                                <a target="_blank" href="{{route('admin.sell.order.create')}}?close_when_done=1" class="btn  btn-info"><i
                                         class="fas fa-edit fa-spin"></i>Tạo đơn mới</a>
-                                <button type="button" style="margin-left: 5px" class="btn btn-xs btn-warning text-white"
+                                <button type="button" style="margin-left: 5px" class="btn  btn-warning text-white"
                                     onclick="showActionsModal()">
                                     Thao tác với đơn hàng được chọn
                                 </button>
-                                <button type="button" class="btn btn-danger btn-xs ml-2" onclick="checkAllAndShowActionModal()">
+                                <button type="button" class="btn btn-danger  ml-2" onclick="checkAllAndShowActionModal()">
                                     Thao tác đơn hàng hiển thị
                                 </button>
                                 @if(getCurrentUser()->hasPermission('export_excel'))
-                                <button type="button" style="margin-left: 5px" class="btn  btn-xs bg-gradient-success"
+                                <button type="button" style="margin-left: 5px" class="btn   bg-gradient-success"
                                     onclick="showExcelModal()">
                                     <i class="fa fa-download"></i> Excel
                                 </button>

@@ -393,14 +393,14 @@ class OrderController extends Controller
             }
             */
 
-            $shopInfo = Shop::query()->whereKey(getCurrentUser()->shop_id)->first();
-            if ($order->status_id == DELIVERY_ORDER_STATUS_ID) {
-                if ($shopInfo->shipping == 'vtp') {
-                    $this->vtpostRepository->createVTPostOrder([$order->id]);
-                } elseif ($shopInfo->shipping == 'ems'){
-                    $this->emsRepository->createEmsOrder([$order->id]);
-                }
-            }
+//            $shopInfo = Shop::query()->whereKey(getCurrentUser()->shop_id)->first();
+//            if ($order->status_id == DELIVERY_ORDER_STATUS_ID) {
+//                if ($shopInfo->shipping == 'vtp') {
+//                    $this->vtpostRepository->createVTPostOrder([$order->id]);
+//                } elseif ($shopInfo->shipping == 'ems'){
+//                    $this->emsRepository->createEmsOrder([$order->id]);
+//                }
+//            }
 
             foreach ($products as $product) {
                 $this->orderProductRepository->create($product, $order->id);
@@ -730,15 +730,15 @@ class OrderController extends Controller
             $failData = [];
             $shopInfo = Shop::query()->whereKey(getCurrentUser()->shop_id)->first();
             if ($statusId == DELIVERY_ORDER_STATUS_ID) {
-                if ($shopInfo->shipping == 'vtp') {
-                    $data = $this->vtpostRepository->createVTPostOrder($ids);
-                    $okeIds = $data['oke_ids'];
-                    $failData = $data['fail_data'];
-                } elseif ($shopInfo->shipping == 'ems') {
-                    $data = $this->emsRepository->createEmsOrder($ids);
-                    $okeIds = $data['oke_ids'];
-                    $failData = $data['fail_data'];
-                }
+//                if ($shopInfo->shipping == 'vtp') {
+//                    $data = $this->vtpostRepository->createVTPostOrder($ids);
+//                    $okeIds = $data['oke_ids'];
+//                    $failData = $data['fail_data'];
+//                } elseif ($shopInfo->shipping == 'ems') {
+//                    $data = $this->emsRepository->createEmsOrder($ids);
+//                    $okeIds = $data['oke_ids'];
+//                    $failData = $data['fail_data'];
+//                }
             }
 
 //            if ($statusId == DELIVERY_ORDER_STATUS_ID) {
